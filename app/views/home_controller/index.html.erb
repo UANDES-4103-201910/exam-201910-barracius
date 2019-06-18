@@ -1,0 +1,20 @@
+<h3>Products:</h3>
+<% @products = Product.limit(10).order("RANDOM()") %>
+<% @products.each do |product| %>
+  <div class="row content">
+    <div style="...">
+      <div>
+        Brand: <%= product.brand %><br>
+        Model: <%= product.model %><br>
+        <% if product.variant == nil %>
+        <% else %>
+          Variant: <%= product.model %><br>
+        <% end %>
+        Price: <%= product.price %><br>
+        Short Description: <%= product.short_description %><br>
+        Long Description: <%= product.long_description %><br>
+        Type: <%= product.type_s %><br>
+      </div>
+    </div>
+  </div>
+<% end %>

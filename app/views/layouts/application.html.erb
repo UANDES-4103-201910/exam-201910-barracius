@@ -10,6 +10,15 @@
   </head>
 
   <body>
+  <%= render 'layouts/top_bar' %>
+  <br>
+  <br>
+  <br>
+  <%= render 'layouts/header' %>
+  <p id="notice" class="center"><%= notice %></p>
+  <div class="container">
     <%= yield %>
+    <%= render 'layouts/footer' %>
+  </div>
   </body>
 </html>
